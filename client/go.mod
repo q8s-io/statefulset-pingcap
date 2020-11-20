@@ -1,6 +1,6 @@
-module github.com/pingcap/advanced-statefulset/client
+module github.com/q8s-io/statefulset-pingcap/client
 
-go 1.13
+go 1.14
 
 require (
 	github.com/google/go-cmp v0.3.1
