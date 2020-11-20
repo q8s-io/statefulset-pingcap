@@ -19,9 +19,9 @@ import (
 	"time"
 
 	"github.com/google/go-cmp/cmp"
-	asapps "github.com/pingcap/advanced-statefulset/client/apis/apps/v1"
-	asappsv1 "github.com/pingcap/advanced-statefulset/client/apis/apps/v1"
-	asfake "github.com/pingcap/advanced-statefulset/client/client/clientset/versioned/fake"
+	asapps "github.com/q8s-io/statefulset-pingcap/client/apis/apps/v1"
+	asappsv1 "github.com/q8s-io/statefulset-pingcap/client/apis/apps/v1"
+	asfake "github.com/q8s-io/statefulset-pingcap/client/client/clientset/versioned/fake"
 	appsv1 "k8s.io/api/apps/v1"
 	v1 "k8s.io/api/apps/v1"
 	apiequality "k8s.io/apimachinery/pkg/api/equality"

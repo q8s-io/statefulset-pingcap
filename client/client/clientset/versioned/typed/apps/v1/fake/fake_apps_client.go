@@ -19,7 +19,7 @@ limitations under the License.
 package fake
 
 import (
-	v1 "github.com/pingcap/advanced-statefulset/client/client/clientset/versioned/typed/apps/v1"
+	v1 "github.com/q8s-io/statefulset-pingcap/client/client/clientset/versioned/typed/apps/v1"
 	rest "k8s.io/client-go/rest"
 	testing "k8s.io/client-go/testing"
 )

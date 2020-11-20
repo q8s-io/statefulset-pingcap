@@ -20,7 +20,7 @@ ARCH ?= $(shell go env GOARCH)
 OS ?= $(shell go env GOOS)
 
 ALL_TARGETS := cmd/controller-manager
-SRC_PREFIX := github.com/pingcap/advanced-statefulset
+SRC_PREFIX := github.com/q8s-io/statefulset-pingcap
 GIT_VERSION = $(shell ./hack/version.sh | awk -F': ' '/^GIT_VERSION:/ {print $$2}')
 
 # in GOPATH mode, we must use the full path name related to $GOPATH

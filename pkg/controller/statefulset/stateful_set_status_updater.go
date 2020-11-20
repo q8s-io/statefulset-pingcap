@@ -22,9 +22,9 @@ import (
 	utilruntime "k8s.io/apimachinery/pkg/util/runtime"
 	"k8s.io/client-go/util/retry"
 
-	apps "github.com/pingcap/advanced-statefulset/client/apis/apps/v1"
-	clientset "github.com/pingcap/advanced-statefulset/client/client/clientset/versioned"
-	statefulsetlisters "github.com/pingcap/advanced-statefulset/client/client/listers/apps/v1"
+	apps "github.com/q8s-io/statefulset-pingcap/client/apis/apps/v1"
+	clientset "github.com/q8s-io/statefulset-pingcap/client/client/clientset/versioned"
+	statefulsetlisters "github.com/q8s-io/statefulset-pingcap/client/client/listers/apps/v1"
 )
 
 // StatefulSetStatusUpdaterInterface is an interface used to update the StatefulSetStatus associated with a StatefulSet.

@@ -21,10 +21,10 @@ package v1
 import (
 	time "time"
 
-	appsv1 "github.com/pingcap/advanced-statefulset/client/apis/apps/v1"
-	versioned "github.com/pingcap/advanced-statefulset/client/client/clientset/versioned"
-	internalinterfaces "github.com/pingcap/advanced-statefulset/client/client/informers/externalversions/internalinterfaces"
-	v1 "github.com/pingcap/advanced-statefulset/client/client/listers/apps/v1"
+	appsv1 "github.com/q8s-io/statefulset-pingcap/client/apis/apps/v1"
+	versioned "github.com/q8s-io/statefulset-pingcap/client/client/clientset/versioned"
+	internalinterfaces "github.com/q8s-io/statefulset-pingcap/client/client/informers/externalversions/internalinterfaces"
+	v1 "github.com/q8s-io/statefulset-pingcap/client/client/listers/apps/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	runtime "k8s.io/apimachinery/pkg/runtime"
 	watch "k8s.io/apimachinery/pkg/watch"

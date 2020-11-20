@@ -19,8 +19,8 @@ limitations under the License.
 package apps
 
 import (
-	v1 "github.com/pingcap/advanced-statefulset/client/client/informers/externalversions/apps/v1"
-	internalinterfaces "github.com/pingcap/advanced-statefulset/client/client/informers/externalversions/internalinterfaces"
+	v1 "github.com/q8s-io/statefulset-pingcap/client/client/informers/externalversions/apps/v1"
+	internalinterfaces "github.com/q8s-io/statefulset-pingcap/client/client/informers/externalversions/internalinterfaces"
 )
 
 // Interface provides access to each of this group's versions.

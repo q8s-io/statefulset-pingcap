@@ -25,8 +25,8 @@ export GO111MODULE=off
 function codegen::join() { local IFS="$1"; shift; echo "$*"; }
 
 bash "${CODEGEN_PKG}"/generate-groups.sh "deepcopy,client,informer,lister" \
-  github.com/pingcap/advanced-statefulset/client/client \
-  github.com/pingcap/advanced-statefulset/client/apis \
+  github.com/q8s-io/statefulset-pingcap/client/client \
+  github.com/q8s-io/statefulset-pingcap/client/apis \
   "apps:v1" \
   --go-header-file "${SCRIPT_ROOT}"/../hack/boilerplate/boilerplate.k8s.go.txt
 
@@ -39,8 +39,8 @@ git checkout client/listers/apps/v1/expansion_generated.go
 # TODO: fix it
 #
 # EXT_FQ_APIS=(
-    # github.com/pingcap/advanced-statefulset/client/apis/apps/v1
-    # github.com/pingcap/advanced-statefulset/client/vendor/k8s.io/kubernetes/pkg/apis/core/v1
+    # github.com/q8s-io/statefulset-pingcap/client/apis/apps/v1
+    # github.com/q8s-io/statefulset-pingcap/client/vendor/k8s.io/kubernetes/pkg/apis/core/v1
 # )
 
 # "${GOPATH}/bin/defaulter-gen"  \

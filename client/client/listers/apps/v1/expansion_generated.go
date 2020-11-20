@@ -21,7 +21,7 @@ package v1
 import (
 	"fmt"
 
-	apps "github.com/pingcap/advanced-statefulset/client/apis/apps/v1"
+	apps "github.com/q8s-io/statefulset-pingcap/client/apis/apps/v1"
 	v1 "k8s.io/api/core/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/labels"

@@ -19,9 +19,9 @@ limitations under the License.
 package fake
 
 import (
-	clientset "github.com/pingcap/advanced-statefulset/client/client/clientset/versioned"
-	appsv1 "github.com/pingcap/advanced-statefulset/client/client/clientset/versioned/typed/apps/v1"
-	fakeappsv1 "github.com/pingcap/advanced-statefulset/client/client/clientset/versioned/typed/apps/v1/fake"
+	clientset "github.com/q8s-io/statefulset-pingcap/client/client/clientset/versioned"
+	appsv1 "github.com/q8s-io/statefulset-pingcap/client/client/clientset/versioned/typed/apps/v1"
+	fakeappsv1 "github.com/q8s-io/statefulset-pingcap/client/client/clientset/versioned/typed/apps/v1/fake"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/watch"
 	"k8s.io/client-go/discovery"

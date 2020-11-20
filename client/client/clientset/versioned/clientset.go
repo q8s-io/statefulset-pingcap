@@ -21,7 +21,7 @@ package versioned
 import (
 	"fmt"
 
-	appsv1 "github.com/pingcap/advanced-statefulset/client/client/clientset/versioned/typed/apps/v1"
+	appsv1 "github.com/q8s-io/statefulset-pingcap/client/client/clientset/versioned/typed/apps/v1"
 	discovery "k8s.io/client-go/discovery"
 	rest "k8s.io/client-go/rest"
 	flowcontrol "k8s.io/client-go/util/flowcontrol"

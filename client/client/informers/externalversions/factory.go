@@ -23,9 +23,9 @@ import (
 	sync "sync"
 	time "time"
 
-	versioned "github.com/pingcap/advanced-statefulset/client/client/clientset/versioned"
-	apps "github.com/pingcap/advanced-statefulset/client/client/informers/externalversions/apps"
-	internalinterfaces "github.com/pingcap/advanced-statefulset/client/client/informers/externalversions/internalinterfaces"
+	versioned "github.com/q8s-io/statefulset-pingcap/client/client/clientset/versioned"
+	apps "github.com/q8s-io/statefulset-pingcap/client/client/informers/externalversions/apps"
+	internalinterfaces "github.com/q8s-io/statefulset-pingcap/client/client/informers/externalversions/internalinterfaces"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	runtime "k8s.io/apimachinery/pkg/runtime"
 	schema "k8s.io/apimachinery/pkg/runtime/schema"

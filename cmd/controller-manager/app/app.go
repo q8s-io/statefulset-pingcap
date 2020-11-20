@@ -33,11 +33,11 @@ import (
 	"k8s.io/klog"
 	utilflag "k8s.io/kubernetes/pkg/util/flag"
 
-	pcinformers "github.com/pingcap/advanced-statefulset/client/client/informers/externalversions"
-	"github.com/pingcap/advanced-statefulset/cmd/controller-manager/config"
-	"github.com/pingcap/advanced-statefulset/cmd/controller-manager/options"
-	"github.com/pingcap/advanced-statefulset/pkg/controller/statefulset"
-	"github.com/pingcap/advanced-statefulset/pkg/verflag"
+	pcinformers "github.com/q8s-io/statefulset-pingcap/client/client/informers/externalversions"
+	"github.com/q8s-io/statefulset-pingcap/cmd/controller-manager/config"
+	"github.com/q8s-io/statefulset-pingcap/cmd/controller-manager/options"
+	"github.com/q8s-io/statefulset-pingcap/pkg/controller/statefulset"
+	"github.com/q8s-io/statefulset-pingcap/pkg/verflag"
 )
 
 // ResyncPeriod returns a function which generates a duration each time it is

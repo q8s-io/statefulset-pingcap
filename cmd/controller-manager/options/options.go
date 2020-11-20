@@ -33,10 +33,10 @@ import (
 	componentbaseconfig "k8s.io/component-base/config"
 	"k8s.io/klog"
 
-	pcclientset "github.com/pingcap/advanced-statefulset/client/client/clientset/versioned"
-	controllermanagerconfig "github.com/pingcap/advanced-statefulset/cmd/controller-manager/config"
-	"github.com/pingcap/advanced-statefulset/pkg/component/config"
-	"github.com/pingcap/advanced-statefulset/pkg/component/options"
+	pcclientset "github.com/q8s-io/statefulset-pingcap/client/client/clientset/versioned"
+	controllermanagerconfig "github.com/q8s-io/statefulset-pingcap/cmd/controller-manager/config"
+	"github.com/q8s-io/statefulset-pingcap/pkg/component/config"
+	"github.com/q8s-io/statefulset-pingcap/pkg/component/options"
 )
 
 // ControllerManagerOptions is the main context object for the advanced-statefulset-controller-manager.

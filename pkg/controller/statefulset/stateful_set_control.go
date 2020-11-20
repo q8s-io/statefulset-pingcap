@@ -29,8 +29,8 @@ import (
 	"k8s.io/client-go/tools/record"
 	"k8s.io/kubernetes/pkg/controller/history"
 
-	apps "github.com/pingcap/advanced-statefulset/client/apis/apps/v1"
-	"github.com/pingcap/advanced-statefulset/client/apis/apps/v1/helper"
+	apps "github.com/q8s-io/statefulset-pingcap/client/apis/apps/v1"
+	"github.com/q8s-io/statefulset-pingcap/client/apis/apps/v1/helper"
 )
 
 // StatefulSetControl implements the control logic for updating StatefulSets and their children Pods. It is implemented

@@ -29,8 +29,8 @@ import (
 	"k8s.io/client-go/tools/record"
 	"k8s.io/client-go/util/retry"
 
-	apps "github.com/pingcap/advanced-statefulset/client/apis/apps/v1"
-	statefulsetlisters "github.com/pingcap/advanced-statefulset/client/client/listers/apps/v1"
+	apps "github.com/q8s-io/statefulset-pingcap/client/apis/apps/v1"
+	statefulsetlisters "github.com/q8s-io/statefulset-pingcap/client/client/listers/apps/v1"
 )
 
 // StatefulPodControlInterface defines the interface that StatefulSetController uses to create, update, and delete Pods,

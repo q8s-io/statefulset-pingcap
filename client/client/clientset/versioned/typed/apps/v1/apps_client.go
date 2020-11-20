@@ -19,8 +19,8 @@ limitations under the License.
 package v1
 
 import (
-	v1 "github.com/pingcap/advanced-statefulset/client/apis/apps/v1"
-	"github.com/pingcap/advanced-statefulset/client/client/clientset/versioned/scheme"
+	v1 "github.com/q8s-io/statefulset-pingcap/client/apis/apps/v1"
+	"github.com/q8s-io/statefulset-pingcap/client/client/clientset/versioned/scheme"
 	rest "k8s.io/client-go/rest"
 )
 

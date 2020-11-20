@@ -12,12 +12,12 @@
 # limitations under the License.
 
 FROM golang:1.13 as builder
-WORKDIR /go/src/github.com/pingcap/advanced-statefulset
+WORKDIR /go/src/github.com/q8s-io/statefulset-pingcap
 ADD . .
 RUN make cmd/controller-manager
 
 # https://github.com/GoogleContainerTools/distroless#why-should-i-use-distroless-images
 FROM gcr.io/distroless/static:latest
 
-COPY --from=builder /go/src/github.com/pingcap/advanced-statefulset/output/bin/linux/amd64/cmd/controller-manager  /usr/local/bin/advanced-statefulset-controller-manager
+COPY --from=builder /go/src/github.com/q8s-io/statefulset-pingcap/output/bin/linux/amd64/cmd/controller-manager  /usr/local/bin/advanced-statefulset-controller-manager
 ENTRYPOINT ["/usr/local/bin/advanced-statefulset-controller-manager"]

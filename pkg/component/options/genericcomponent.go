@@ -19,7 +19,7 @@ import (
 	componentbaseconfig "k8s.io/component-base/config"
 	"k8s.io/kubernetes/pkg/client/leaderelectionconfig"
 
-	"github.com/pingcap/advanced-statefulset/pkg/component/config"
+	"github.com/q8s-io/statefulset-pingcap/pkg/component/config"
 )
 
 // GenericComponentOptions holds the options which are generic.

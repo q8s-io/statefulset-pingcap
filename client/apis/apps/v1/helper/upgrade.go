@@ -20,8 +20,8 @@ import (
 	clientset "k8s.io/client-go/kubernetes"
 	"k8s.io/klog"
 	
-	asv1 "github.com/pingcap/advanced-statefulset/client/apis/apps/v1"
-	asclientset "github.com/pingcap/advanced-statefulset/client/client/clientset/versioned"
+	asv1 "github.com/q8s-io/statefulset-pingcap/client/apis/apps/v1"
+	asclientset "github.com/q8s-io/statefulset-pingcap/client/client/clientset/versioned"
 )
 
 const (

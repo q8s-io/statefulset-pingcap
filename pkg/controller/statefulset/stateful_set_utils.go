@@ -32,8 +32,8 @@ import (
 	"k8s.io/kubernetes/pkg/controller"
 	"k8s.io/kubernetes/pkg/controller/history"
 
-	apps "github.com/pingcap/advanced-statefulset/client/apis/apps/v1"
-	"github.com/pingcap/advanced-statefulset/client/client/clientset/versioned/scheme"
+	apps "github.com/q8s-io/statefulset-pingcap/client/apis/apps/v1"
+	"github.com/q8s-io/statefulset-pingcap/client/client/clientset/versioned/scheme"
 )
 
 var patchCodec = scheme.Codecs.LegacyCodec(apps.SchemeGroupVersion)

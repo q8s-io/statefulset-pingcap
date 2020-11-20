@@ -17,7 +17,7 @@ import (
 	"testing"
 
 	"github.com/google/go-cmp/cmp"
-	asappsv1 "github.com/pingcap/advanced-statefulset/client/apis/apps/v1"
+	asappsv1 "github.com/q8s-io/statefulset-pingcap/client/apis/apps/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/util/sets"
 )

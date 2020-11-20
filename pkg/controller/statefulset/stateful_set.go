@@ -40,12 +40,12 @@ import (
 	"k8s.io/kubernetes/pkg/controller"
 	"k8s.io/kubernetes/pkg/controller/history"
 
-	apps "github.com/pingcap/advanced-statefulset/client/apis/apps/v1"
-	"github.com/pingcap/advanced-statefulset/client/apis/apps/v1/helper"
-	clientset "github.com/pingcap/advanced-statefulset/client/client/clientset/versioned"
-	asscheme "github.com/pingcap/advanced-statefulset/client/client/clientset/versioned/scheme"
-	appsinformers "github.com/pingcap/advanced-statefulset/client/client/informers/externalversions/apps/v1"
-	appslisters "github.com/pingcap/advanced-statefulset/client/client/listers/apps/v1"
+	apps "github.com/q8s-io/statefulset-pingcap/client/apis/apps/v1"
+	"github.com/q8s-io/statefulset-pingcap/client/apis/apps/v1/helper"
+	clientset "github.com/q8s-io/statefulset-pingcap/client/client/clientset/versioned"
+	asscheme "github.com/q8s-io/statefulset-pingcap/client/client/clientset/versioned/scheme"
+	appsinformers "github.com/q8s-io/statefulset-pingcap/client/client/informers/externalversions/apps/v1"
+	appslisters "github.com/q8s-io/statefulset-pingcap/client/client/listers/apps/v1"
 
 	"k8s.io/klog"
 )

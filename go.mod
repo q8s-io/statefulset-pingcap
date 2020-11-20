@@ -5,12 +5,9 @@ go 1.14
 require (
 	github.com/google/go-cmp v0.3.0
 	github.com/onsi/ginkgo v1.10.1
-	github.com/onsi/gomega v1.7.0
-	github.com/pingcap/advanced-statefulset v0.4.0
 	github.com/spf13/cobra v0.0.5
 	github.com/spf13/pflag v1.0.5
 	k8s.io/api v0.17.3
-	k8s.io/apiextensions-apiserver v0.0.0
 	k8s.io/apimachinery v0.17.3
 	k8s.io/apiserver v0.17.0
 	k8s.io/client-go v0.17.3
@@ -18,12 +15,10 @@ require (
 	k8s.io/component-base v0.17.0
 	k8s.io/klog v1.0.0
 	k8s.io/kubernetes v1.17.3
-	k8s.io/utils v0.0.0-20191114184206-e782cd3c129f
 )
 
 replace (
-	github.com/pingcap/advanced-statefulset => ./
-	github.com/pingcap/advanced-statefulset/client => ./client
+	github.com/q8s-io/statefulset-pingcap/client => ./client
 	k8s.io/api => k8s.io/api v0.17.0
 	k8s.io/apiextensions-apiserver => k8s.io/apiextensions-apiserver v0.17.0
 	k8s.io/apimachinery => k8s.io/apimachinery v0.17.0

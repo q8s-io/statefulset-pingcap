@@ -19,8 +19,8 @@ import (
 	"k8s.io/client-go/tools/leaderelection"
 	"k8s.io/client-go/tools/record"
 
-	pcclientset "github.com/pingcap/advanced-statefulset/client/client/clientset/versioned"
-	"github.com/pingcap/advanced-statefulset/pkg/component/config"
+	pcclientset "github.com/q8s-io/statefulset-pingcap/client/client/clientset/versioned"
+	"github.com/q8s-io/statefulset-pingcap/pkg/component/config"
 )
 
 // Config is the main context object for the controller manager.

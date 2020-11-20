@@ -19,7 +19,7 @@ limitations under the License.
 package fake
 
 import (
-	appsv1 "github.com/pingcap/advanced-statefulset/client/apis/apps/v1"
+	appsv1 "github.com/q8s-io/statefulset-pingcap/client/apis/apps/v1"
 	autoscalingv1 "k8s.io/api/autoscaling/v1"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	labels "k8s.io/apimachinery/pkg/labels"

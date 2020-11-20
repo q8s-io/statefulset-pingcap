@@ -20,7 +20,7 @@ import (
 
 	"k8s.io/component-base/logs"
 
-	"github.com/pingcap/advanced-statefulset/cmd/controller-manager/app"
+	"github.com/q8s-io/statefulset-pingcap/cmd/controller-manager/app"
 )
 
 func main() {
