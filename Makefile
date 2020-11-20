@@ -34,10 +34,6 @@ endif
 all: build
 .PHONY: all
 
-verify: verify-client
-	./hack/verify-all.sh
-.PHONY: verify
-
 verify-client:
 	make -C client verify
 .PHONY: verify-client
@@ -48,27 +44,3 @@ build: $(ALL_TARGETS)
 $(ALL_TARGETS):
 	GOOS=$(OS) GOARCH=$(ARCH) CGO_ENABLED=0 $(GO) build -ldflags "${LDFLAGS}" -o output/bin/$(OS)/$(ARCH)/$@ $(SRC_PREFIX)/$@
 .PHONY: $(ALL_TARGETS)
-
-test: test-client
-	hack/make-rules/test.sh $(WHAT)
-.PHONY: test
-
-test-client:
-	make -C client test
-.PHONY: test-client
-
-test-integration: vendor/k8s.io/kubernetes/pkg/generated/openapi/zz_generated.openapi.go
-	hack/make-rules/test-integration.sh $(WHAT)
-.PHONY: test-integration
-
-e2e:
-	hack/e2e.sh
-.PHONY: e2e
-
-e2e-examples:
-	hack/e2e-examples.sh
-.PHONY: e2e-examples
-
-vendor/k8s.io/kubernetes/pkg/generated/openapi/zz_generated.openapi.go:
-	hack/generate-kube-openapi.sh
-.PHONY: vendor/k8s.io/kubernetes/pkg/generated/openapi/zz_generated.openapi.go

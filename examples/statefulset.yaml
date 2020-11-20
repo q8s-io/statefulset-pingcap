@@ -11,6 +11,7 @@ spec:
   clusterIP: None
   selector:
     app: web
+
 ---
 apiVersion: apps.pingcap.com/v1alpha1
 kind: StatefulSet

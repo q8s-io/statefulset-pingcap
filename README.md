@@ -1,65 +1,28 @@
-# Advanced StatefulSet
+# StatefulSet
 
-This is an Advanced StatefulSet CRD implementation based on official
-StatefulSet in Kubernetes 1.17.0.
+Advanced StatefulSet from PingCAP.
 
-This is an experimental project.
+https://github.com/pingcap/advanced-statefulset
 
-## Features
+## Development operator
 
-In addition to official StatefulSet, it adds one feature:
+```go
+package main
 
-- Scale in at an arbitrary position: https://github.com/kubernetes/kubernetes/issues/83224
-
-## Development
-
-### Verify
-
+import (
+	"github.com/q8s-io/statefulset-pingcap/client/apis/apps/v1"
+)
 ```
+
+## Verify
+
+```shell script
 make verify
 ```
 
-### Unit Tests
+## Deploy a statefulset
 
-```
-make test
-```
-
-### Integration Tests
-
-```
-make test-integration
-```
-
-### E2E
-
-```
-make e2e
-```
-
-## Test it out
-
-### start a cluster
-
-[kind](https://kind.sigs.k8s.io/) `v0.7.0+` is recommended.
-
-```
-curl -Lo ./kind https://github.com/kubernetes-sigs/kind/releases/download/v0.7.0/kind-$(uname)-amd64
-chmod +x ./kind
-./kind create cluster
-```
-
-### run advanced statefulset controller locally
-
-Open a new terminal and run controller:
-
-```
-hack/local-up.sh
-```
-
-### deploy a statefulset
-
-```
+```shell script
 kubectl apply -f examples/statefulset.yaml
 ```
 
@@ -67,14 +30,14 @@ kubectl apply -f examples/statefulset.yaml
 
 Note that `--resource-version` is required for CRD objects.
 
-```
+```shell script
 RESOURCE_VERSION=$(kubectl get statefulsets.pingcap.com web -ojsonpath='{.metadata.resourceVersion}')
 kubectl scale --resource-version=$RESOURCE_VERSION --replicas=4 statefulsets.pingcap.com web
 ```
 
 ### scale in
 
-```
+```shell script
 RESOURCE_VERSION=$(kubectl get statefulsets.pingcap.com web -ojsonpath='{.metadata.resourceVersion}')
 kubectl scale --resource-version=$RESOURCE_VERSION --replicas=3 statefulsets.pingcap.com web
 ```
@@ -84,6 +47,6 @@ kubectl scale --resource-version=$RESOURCE_VERSION --replicas=3 statefulsets.pin
 We should set `delete-slots` annotations and decrement `spec.replicas` at the
 same time.
 
-```
+```shell script
 kubectl apply -f examples/scale-in-statefulset.yaml 
 ```
