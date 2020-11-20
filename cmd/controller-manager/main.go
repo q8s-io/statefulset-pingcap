@@ -18,8 +18,9 @@ import (
 	"os"
 	"time"
 
-	"github.com/pingcap/advanced-statefulset/cmd/controller-manager/app"
 	"k8s.io/component-base/logs"
+
+	"github.com/pingcap/advanced-statefulset/cmd/controller-manager/app"
 )
 
 func main() {

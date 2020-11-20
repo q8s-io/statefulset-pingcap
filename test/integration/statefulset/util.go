@@ -23,12 +23,6 @@ import (
 	"testing"
 	"time"
 
-	appsv1 "github.com/pingcap/advanced-statefulset/client/apis/apps/v1"
-	"github.com/pingcap/advanced-statefulset/client/apis/apps/v1/helper"
-	pcclientset "github.com/pingcap/advanced-statefulset/client/client/clientset/versioned"
-	typedappsv1 "github.com/pingcap/advanced-statefulset/client/client/clientset/versioned/typed/apps/v1"
-	pcinformers "github.com/pingcap/advanced-statefulset/client/client/informers/externalversions"
-	"github.com/pingcap/advanced-statefulset/pkg/controller/statefulset"
 	v1 "k8s.io/api/core/v1"
 	apiextensionsclientset "k8s.io/apiextensions-apiserver/pkg/client/clientset/clientset"
 	"k8s.io/apimachinery/pkg/api/resource"
@@ -44,6 +38,13 @@ import (
 	"k8s.io/klog"
 	integrationetcd "k8s.io/kubernetes/test/integration/etcd"
 	"k8s.io/kubernetes/test/integration/framework"
+
+	appsv1 "github.com/pingcap/advanced-statefulset/client/apis/apps/v1"
+	"github.com/pingcap/advanced-statefulset/client/apis/apps/v1/helper"
+	pcclientset "github.com/pingcap/advanced-statefulset/client/client/clientset/versioned"
+	typedappsv1 "github.com/pingcap/advanced-statefulset/client/client/clientset/versioned/typed/apps/v1"
+	pcinformers "github.com/pingcap/advanced-statefulset/client/client/informers/externalversions"
+	"github.com/pingcap/advanced-statefulset/pkg/controller/statefulset"
 )
 
 const (

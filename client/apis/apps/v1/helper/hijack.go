@@ -16,10 +16,7 @@ package helper
 import (
 	"encoding/json"
 	"sync"
-
-	asv1 "github.com/pingcap/advanced-statefulset/client/apis/apps/v1"
-	asclientset "github.com/pingcap/advanced-statefulset/client/client/clientset/versioned"
-	asclientsetv1 "github.com/pingcap/advanced-statefulset/client/client/clientset/versioned/typed/apps/v1"
+	
 	appsv1 "k8s.io/api/apps/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/types"
@@ -27,6 +24,10 @@ import (
 	"k8s.io/apimachinery/pkg/watch"
 	clientset "k8s.io/client-go/kubernetes"
 	clientsetappsv1 "k8s.io/client-go/kubernetes/typed/apps/v1"
+	
+	asv1 "github.com/pingcap/advanced-statefulset/client/apis/apps/v1"
+	asclientset "github.com/pingcap/advanced-statefulset/client/client/clientset/versioned"
+	asclientsetv1 "github.com/pingcap/advanced-statefulset/client/client/clientset/versioned/typed/apps/v1"
 )
 
 // hijackClient is a special Kubernetes client which hijack statefulset API requests.

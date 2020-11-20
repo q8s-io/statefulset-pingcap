@@ -21,11 +21,6 @@ import (
 	"runtime"
 	"time"
 
-	pcinformers "github.com/pingcap/advanced-statefulset/client/client/informers/externalversions"
-	"github.com/pingcap/advanced-statefulset/cmd/controller-manager/config"
-	"github.com/pingcap/advanced-statefulset/cmd/controller-manager/options"
-	"github.com/pingcap/advanced-statefulset/pkg/controller/statefulset"
-	"github.com/pingcap/advanced-statefulset/pkg/verflag"
 	"github.com/spf13/cobra"
 	flag "github.com/spf13/pflag"
 	"k8s.io/apimachinery/pkg/util/wait"
@@ -37,6 +32,12 @@ import (
 	"k8s.io/component-base/version"
 	"k8s.io/klog"
 	utilflag "k8s.io/kubernetes/pkg/util/flag"
+
+	pcinformers "github.com/pingcap/advanced-statefulset/client/client/informers/externalversions"
+	"github.com/pingcap/advanced-statefulset/cmd/controller-manager/config"
+	"github.com/pingcap/advanced-statefulset/cmd/controller-manager/options"
+	"github.com/pingcap/advanced-statefulset/pkg/controller/statefulset"
+	"github.com/pingcap/advanced-statefulset/pkg/verflag"
 )
 
 // ResyncPeriod returns a function which generates a duration each time it is

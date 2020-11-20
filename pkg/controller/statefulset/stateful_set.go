@@ -21,12 +21,6 @@ import (
 	"reflect"
 	"time"
 
-	apps "github.com/pingcap/advanced-statefulset/client/apis/apps/v1"
-	"github.com/pingcap/advanced-statefulset/client/apis/apps/v1/helper"
-	clientset "github.com/pingcap/advanced-statefulset/client/client/clientset/versioned"
-	asscheme "github.com/pingcap/advanced-statefulset/client/client/clientset/versioned/scheme"
-	appsinformers "github.com/pingcap/advanced-statefulset/client/client/informers/externalversions/apps/v1"
-	appslisters "github.com/pingcap/advanced-statefulset/client/client/listers/apps/v1"
 	kubeapps "k8s.io/api/apps/v1"
 	v1 "k8s.io/api/core/v1"
 	"k8s.io/apimachinery/pkg/api/errors"
@@ -45,6 +39,13 @@ import (
 	"k8s.io/client-go/util/workqueue"
 	"k8s.io/kubernetes/pkg/controller"
 	"k8s.io/kubernetes/pkg/controller/history"
+
+	apps "github.com/pingcap/advanced-statefulset/client/apis/apps/v1"
+	"github.com/pingcap/advanced-statefulset/client/apis/apps/v1/helper"
+	clientset "github.com/pingcap/advanced-statefulset/client/client/clientset/versioned"
+	asscheme "github.com/pingcap/advanced-statefulset/client/client/clientset/versioned/scheme"
+	appsinformers "github.com/pingcap/advanced-statefulset/client/client/informers/externalversions/apps/v1"
+	appslisters "github.com/pingcap/advanced-statefulset/client/client/listers/apps/v1"
 
 	"k8s.io/klog"
 )

@@ -14,12 +14,13 @@
 package config
 
 import (
-	pcclientset "github.com/pingcap/advanced-statefulset/client/client/clientset/versioned"
-	"github.com/pingcap/advanced-statefulset/pkg/component/config"
 	clientset "k8s.io/client-go/kubernetes"
 	"k8s.io/client-go/rest"
 	"k8s.io/client-go/tools/leaderelection"
 	"k8s.io/client-go/tools/record"
+
+	pcclientset "github.com/pingcap/advanced-statefulset/client/client/clientset/versioned"
+	"github.com/pingcap/advanced-statefulset/pkg/component/config"
 )
 
 // Config is the main context object for the controller manager.

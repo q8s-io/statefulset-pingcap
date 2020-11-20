@@ -14,13 +14,14 @@
 package helper
 
 import (
-	asv1 "github.com/pingcap/advanced-statefulset/client/apis/apps/v1"
-	asclientset "github.com/pingcap/advanced-statefulset/client/client/clientset/versioned"
 	appsv1 "k8s.io/api/apps/v1"
 	apierrors "k8s.io/apimachinery/pkg/api/errors"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	clientset "k8s.io/client-go/kubernetes"
 	"k8s.io/klog"
+	
+	asv1 "github.com/pingcap/advanced-statefulset/client/apis/apps/v1"
+	asclientset "github.com/pingcap/advanced-statefulset/client/client/clientset/versioned"
 )
 
 const (

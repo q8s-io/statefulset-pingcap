@@ -18,10 +18,6 @@ import (
 	"os"
 	"time"
 
-	pcclientset "github.com/pingcap/advanced-statefulset/client/client/clientset/versioned"
-	controllermanagerconfig "github.com/pingcap/advanced-statefulset/cmd/controller-manager/config"
-	"github.com/pingcap/advanced-statefulset/pkg/component/config"
-	"github.com/pingcap/advanced-statefulset/pkg/component/options"
 	v1 "k8s.io/api/core/v1"
 	utilerrors "k8s.io/apimachinery/pkg/util/errors"
 	"k8s.io/apimachinery/pkg/util/uuid"
@@ -36,6 +32,11 @@ import (
 	cliflag "k8s.io/component-base/cli/flag"
 	componentbaseconfig "k8s.io/component-base/config"
 	"k8s.io/klog"
+
+	pcclientset "github.com/pingcap/advanced-statefulset/client/client/clientset/versioned"
+	controllermanagerconfig "github.com/pingcap/advanced-statefulset/cmd/controller-manager/config"
+	"github.com/pingcap/advanced-statefulset/pkg/component/config"
+	"github.com/pingcap/advanced-statefulset/pkg/component/options"
 )
 
 // ControllerManagerOptions is the main context object for the advanced-statefulset-controller-manager.
