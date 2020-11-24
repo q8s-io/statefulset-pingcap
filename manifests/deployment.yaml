@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: advanced-statefulset-controller
-        image: pingcap/advanced-statefulset:latest
+        image: q8s-io/statefulset-pingcap:latest
         imagePullPolicy: IfNotPresent
         args:
         - --v=4
