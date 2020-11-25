@@ -3,10 +3,10 @@ SHELL:=/usr/bin/env bash
 
 .DEFAULT_GOAL := help
 
-VERSION := 0.2.9
+VERSION := $(shell git rev-parse --short HEAD)
 
 # Define Docker related variables. Releases should modify and double check these vars.
-REGISTRY := r.qihoo.cloud/bigdata_infra
+REGISTRY := uhub.service.ucloud.cn/infra
 IMAGE := statefulset-pingcap-controller-manager
 CONTROLLER_IMG := $(REGISTRY)/$(IMAGE)
 

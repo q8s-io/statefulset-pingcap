@@ -5,7 +5,7 @@ WORKDIR /go/src/github.com/q8s-io/statefulset-pingcap
 
 COPY . .
 
-RUN GO111MODULE=on GOOS=linux GOARCH=amd64 CGO_ENABLED=0 GOPROXY=https://mirrors.aliyun.com/goproxy/  go build ./tmp/statefulset-pingcap-controller-manager github.com/q8s-io/statefulset-pingcap/cmd/controller-manager
+RUN GO111MODULE=on GOOS=linux GOARCH=amd64 CGO_ENABLED=0 GOPROXY=https://goproxy.cn  go build -o ./tmp/statefulset-pingcap-controller-manager github.com/q8s-io/statefulset-pingcap/cmd/controller-manager
 
 # build server
 FROM alpine:3.8

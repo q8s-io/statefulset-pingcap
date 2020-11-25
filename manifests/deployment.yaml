@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: advanced-statefulset-controller
-        image: q8s-io/statefulset-pingcap:latest
+        image: uhub.service.ucloud.cn/infra/statefulset-pingcap-controller-manager:303930b
         imagePullPolicy: IfNotPresent
         args:
         - --v=4
