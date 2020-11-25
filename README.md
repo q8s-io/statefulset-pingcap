@@ -4,7 +4,7 @@ Advanced StatefulSet from PingCAP.
 
 https://github.com/q8s-io/statefulset-pingcap
 
-## Development operator
+## import development
 
 ```go
 package main
