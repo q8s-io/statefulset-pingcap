@@ -1,16 +1,3 @@
-// Copyright 2019 PingCAP, Inc.
-//
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-//
-//     http://www.apache.org/licenses/LICENSE-2.0
-//
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// See the License for the specific language governing permissions and
-// limitations under the License.
-
 package app
 
 import (
@@ -37,7 +24,6 @@ import (
 	"github.com/q8s-io/statefulset-pingcap/cmd/controller-manager/config"
 	"github.com/q8s-io/statefulset-pingcap/cmd/controller-manager/options"
 	"github.com/q8s-io/statefulset-pingcap/pkg/controller/statefulset"
-	"github.com/q8s-io/statefulset-pingcap/pkg/verflag"
 )
 
 // ResyncPeriod returns a function which generates a duration each time it is
@@ -112,24 +98,22 @@ func NewControllerManagerCommand() *cobra.Command {
 		Use:  "controller-manager",
 		Long: `Advanced StatefulSet Controller Manager`,
 		Run: func(cmd *cobra.Command, args []string) {
-			verflag.PrintAndExitIfRequested()
 			utilflag.PrintFlags(flag.CommandLine)
 
 			c, err := opts.Config()
 			if err != nil {
-				fmt.Fprintf(os.Stderr, "%v\n", err)
+				_, _ = fmt.Fprintf(os.Stderr, "%v\n", err)
 				os.Exit(1)
 			}
 
 			if err := Run(c.Complete(), wait.NeverStop); err != nil {
-				fmt.Fprintf(os.Stderr, "%v\n", err)
+				_, _ = fmt.Fprintf(os.Stderr, "%v\n", err)
 				os.Exit(1)
 			}
 		},
 	}
 
 	namedFlagSets := opts.Flags()
-	verflag.AddFlags(namedFlagSets.FlagSet("global"))
 	globalflag.AddGlobalFlags(namedFlagSets.FlagSet("global"), cmd.Name())
 	for _, f := range namedFlagSets.FlagSets {
 		flag.CommandLine.AddFlagSet(f)
@@ -138,12 +122,12 @@ func NewControllerManagerCommand() *cobra.Command {
 	usageFmt := "Usage:\n  %s\n"
 	cols, _, _ := term.TerminalSize(cmd.OutOrStdout())
 	cmd.SetUsageFunc(func(cmd *cobra.Command) error {
-		fmt.Fprintf(cmd.OutOrStderr(), usageFmt, cmd.UseLine())
+		_, _ = fmt.Fprintf(cmd.OutOrStderr(), usageFmt, cmd.UseLine())
 		cliflag.PrintSections(cmd.OutOrStderr(), namedFlagSets, cols)
 		return nil
 	})
 	cmd.SetHelpFunc(func(cmd *cobra.Command, args []string) {
-		fmt.Fprintf(cmd.OutOrStdout(), "%s\n\n"+usageFmt, cmd.Long, cmd.UseLine())
+		_, _ = fmt.Fprintf(cmd.OutOrStdout(), "%s\n\n"+usageFmt, cmd.Long, cmd.UseLine())
 		cliflag.PrintSections(cmd.OutOrStdout(), namedFlagSets, cols)
 	})
 

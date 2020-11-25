@@ -1,23 +1,17 @@
-# Copyright 2019 PingCAP, Inc.
-#
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-#     http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# See the License for the specific language governing permissions and
-# limitations under the License.
+# build builder
+FROM golang:1.14 as builder
 
-FROM golang:1.13 as builder
 WORKDIR /go/src/github.com/q8s-io/statefulset-pingcap
-ADD . .
-RUN make cmd/controller-manager
 
-# https://github.com/GoogleContainerTools/distroless#why-should-i-use-distroless-images
-FROM gcr.io/distroless/static:latest
+COPY . .
 
-COPY --from=builder /go/src/github.com/q8s-io/statefulset-pingcap/output/bin/linux/amd64/cmd/controller-manager  /usr/local/bin/advanced-statefulset-controller-manager
-ENTRYPOINT ["/usr/local/bin/advanced-statefulset-controller-manager"]
+RUN GO111MODULE=on GOOS=linux GOARCH=amd64 CGO_ENABLED=0 GOPROXY=https://mirrors.aliyun.com/goproxy/  go build ./tmp/statefulset-pingcap-controller-manager github.com/q8s-io/statefulset-pingcap/cmd/controller-manager
+
+# build server
+FROM alpine:3.8
+
+WORKDIR /
+
+COPY --from=builder /go/src/github.com/q8s-io/statefulset-pingcap/tmp/statefulset-pingcap-controller-manager /usr/local/bin/statefulset-pingcap-controller-manager
+
+ENTRYPOINT ["/usr/local/bin/statefulset-pingcap-controller-manager"]
